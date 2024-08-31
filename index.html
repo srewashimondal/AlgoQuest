@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Speed Guesser</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="game-container">
+            <div class="start-page">
+                <div class="game-title">
+                    <h2>AlgoQuest</h2>
+                </div>
+                <p>Given a definition, guess as many Computer Science's Data Structures and Algorithms words as possible in the allotted time to obtain a score of your correct guesses.</p>
+                <button id="start-button" onclick="startGame()">Start</button>
+            </div>
+            <div class="game-page">
+                <div class="game-title">
+                    <h2>AlgoQuest</h2>
+                </div>
+                <div class="timer-score-container">
+                    <p id="timer"></p>
+                    <p id="current-score"></p>
+                    <p id="high-score"></p>
+                    <p id="fastest-time"></p>
+                </div>
+                <div class="definition-container">
+                    <p id="definition">Definition of the word</p>
+                </div>
+                <div class="word-container">
+
+                </div>
+                <div class="input-container">
+                    <p id="message"></p>
+                    <form id = "input-container" onsubmit="event.preventDefault(); checkSubmission()">
+                        <input type="text" id="input" placeholder="Enter your guess...">
+                        <div class="choices-container">
+                            <button id="submit-button">Submit</button>
+                            <button id="pass-button" onclick="passDefinition()">Pass</button>
+                        </div>
+                    </form>
+                    <div class="restart-button-container">
+                        <button id="restart-button" onclick="restartGame()">Restart Game</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
